@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSEMBLÉIA DE DEUS CAPIVARI</title>
+    <link rel="icon" href="img/logo.ad.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-TxijKuLif60P1SP+yIJeBo0qmnzGQngBkP86VwL+z38/9Wg9oKNN0p+odQocDYUTmyIZjCC1zWVuB0UJnc24Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https: //fonts.googleapis.com/css2? family= Merriweather+Sans:wght@300 &família = Raleway & display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/dc33abc9ec.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="slideshow">
+        <img src="img/slogan.jpg" alt="">
+        <img src="img/ad11.jpeg" alt="foto ad">
+        <img src="img/ad7.jpg" alt="foto ad">
+        <img src="img/ad12.jpeg" alt="foto ad">
+        <img src="img/ad1.jpg" alt="foto ad">
+        <img src="img/ad14.jpg" alt="">
+        <img src="img/carlinhos.jpeg" alt="foto ad">
+        <img src="img/materafa.jpg" alt="foto ad">
+        <img src="img/ad16.jpeg" alt="">
+        <img src="img/ad13.jpg" alt="">
+    </div>
+    <div class="logo">
+        <img src="img/logo.ad.png" alt="foto Daniel" class="avatar">
+    </div>
+    <h1>AD CAPIVARI</h1>
+    <span class="spn">ASSEMBLÉIA DE DEUS MINISTÉRIO CAPIVARI</span>
+    <ul class="social">
+        <li>
+            <a href="https://www.instagram.com/adcapivarioficial/" target="blank">
+                <img src="img/instagram-icone-icon.png" alt="Instagram">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/adcapivarisede?locale=pt_BR" target="blank">
+                <img src="img/icone-facebook.png" alt="Facebook">
+            </a>
+        </li>
+    </ul>
+
+    <button id="botao" onclick="toggleBotoesAdicionais()">
+        <b></b>Acompanhe nossas Redes Sociais</b>
+        <i class="fas fa-chevron-down" style="margin: 0 5px;" ;></i> </button>
+    <div class="botoes-adicionais">
+        <button class="botao-adicional" onclick="window.location.href='https://www.instagram.com/adcapivaricong_mds/'">
+            <img src="img/instagram-icone-icon.png" alt="">
+            Congregação MDS
+        </button>
+        <button class="botao-adicional"
+            onclick="window.location.href='https://www.instagram.com/stories/highlights/17864479313932823/'">
+            <img src="img/instagram-icone-icon.png" alt="">
+            Circulo de Oração - Coluna de Fogo
+        </button>
+        <button class="botao-adicional" onclick="window.location.href='https://www.instagram.com/umadcoficial_/'">
+            <img src="img/instagram-icone-icon.png" alt="">
+            UMADCA - Ministério de Jovens
+        </button>
+        <button class="botao-adicional" onclick="window.location.href='https://www.instagram.com/seminarioebd/'">
+            <img src="img/instagram-icone-icon.png" alt="">
+            Seminário EBD
+        </button>
+    </div>
+
+    <div class="videoshow">
+        <video src="video/video.aviva.mp4" type="video/mp4" width="360" height="360" controls autoplay>
+        </video>
+    </div>
+
+    <ul class="links">
+        <li>
+            <a href="#">
+                Fique por dentro das nossas programações.
+                <span>Segunda 19:30 hrs - ESCOLA BÍBLICA (EBD).</span>
+                <span>Quinta 19:30 hrs - CULTO AVIVA.</span>
+                <span>Domingo 18:30 hrs - Culto da Família.</span>
+                <span
+                    style="color:#181b72;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 15px;margin-top: 15px;">Avenida
+                    Newton Pimenta Neves, 351 - Alto Castelani</span>
+            </a>
+        </li>
+    </ul>
+</body>
+
+</html>
+<script>
+    // Função para fazer a transição das imagens
+    function slideTransition() {
+        const slideshow = document.getElementById('slideshow');
+        const images = slideshow.getElementsByTagName('img');
+        const numImages = images.length;
+
+        let currentIndex = 0;
+
+        // Exibir a primeira imagem
+        images[currentIndex].style.opacity = 1;
+
+        setInterval(() => {
+            // Esconder a imagem atual
+            images[currentIndex].style.opacity = 0;
+            currentIndex = (currentIndex + 1) % numImages;
+            // Exibir a próxima imagem
+            images[currentIndex].style.opacity = 1;
+        }, 3000); // Tempo de transição entre as imagens em milissegundos (3 segundos neste exemplo)
+    }
+
+    window.onload = function () {
+        slideTransition();
+    };
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const botao = document.getElementById("botao");
+        const arrowIcon = botao.querySelector("i");
+        const botoesAdicionais = document.querySelector('.botoes-adicionais');
+        let isUp = false;
+
+        botao.addEventListener("click", function () {
+            isUp = !isUp;
+            arrowIcon.classList.toggle("fa-chevron-down", !isUp);
+            arrowIcon.classList.toggle("fa-chevron-up", isUp);
+
+            if (isUp) {
+                botoesAdicionais.style.display = 'flex';
+            } else {
+                botoesAdicionais.style.display = 'none';
+            }
+        });
+    });
+</script>
