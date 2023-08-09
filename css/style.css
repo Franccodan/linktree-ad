@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    background: rgb(239, 239, 244);
+    background: -moz-linear-gradient(0deg, rgba(239, 239, 244, 1) 0%, rgba(249, 245, 245, 1) 55%, rgba(255, 255, 255, 1) 95%);
+    background: -webkit-linear-gradient(0deg, rgba(239, 239, 244, 1) 0%, rgba(249, 245, 245, 1) 55%, rgba(255, 255, 255, 1) 95%);
+    background: linear-gradient(0deg, rgba(239, 239, 244, 1) 0%, rgba(249, 245, 245, 1) 55%, rgba(255, 255, 255, 1) 95%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#efeff4", endColorstr="#ffffff", GradientType=1);
+    color: black;
+}
+
+.logo {
+    margin-top: 40px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.videoshow {
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 80px;
+    border: 3px solid white;
+    box-shadow: 0 0 20px rgb(150, 148, 148);
+}
+
+.spn {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+}
+
+.spn-social {
+    display: block;
+    text-align: center;
+    font-size: 11px;
+}
+
+#botao {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background-color: white;
+    color: #0f0f0f;
+    text-decoration: none;
+    border-radius: 15px;
+    margin: 0 auto;
+    cursor: pointer;
+    width: 90%;
+    font-size: 14px;
+    display: block;
+    /* Adicionado para alinhar ícone e texto em linha */
+    flex-wrap: wrap;
+    /* Permite que o texto quebre linha */
+}
+
+.botao img {
+    width: 22px;
+    /* Ajuste o tamanho do ícone conforme necessário */
+    height: 22px;
+    margin-right: 5px;
+    /* Espaço entre o ícone e o texto */
+}
+
+.botoes-adicionais {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.botao-adicional {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px 20px;
+    background-color: white;
+    color: #080808;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: 5px;
+    cursor: pointer;
+    width: 90%;
+    font-size: 15px;
+    display: flex;
+    /* Adicionado para alinhar ícone e texto em linha */
+    align-items: center;
+    /* Alinha o ícone e o texto verticalmente */
+    flex-wrap: wrap;
+    /* Permite que o texto quebre linha */
+}
+
+.botao-adicional img {
+    width: 22px;
+    /* Ajuste o tamanho do ícone conforme necessário */
+    height: 22px;
+    margin-right: 10px;
+    /* Espaço entre o ícone e o texto */
+}
+
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100px;
+    font-size: 25px;
+    margin-bottom: 2px;
+    margin-top: 30px;
+    color: rgb(2, 2, 2);
+    text-align: center;
+}
+
+h2 {
+    font-size: 16px;
+    color: white;
+}
+
+#slideshow {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+#slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+/* Media query para dispositivos com largura máxima de 768 pixels (por exemplo, tablets e smartphones em modo paisagem) */
+@media screen and (max-width: 768px) {
+    #slideshow {
+        height: 200px;
+        /* Reduz a altura para melhor visualização em dispositivos móveis */
+    }
+
+    .videoshow {
+        height: 200px;
+        /* Reduz a altura para melhor visualização em dispositivos móveis */
+    }
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 10px;
+}
+
+.social img {
+    width: 25px;
+    padding: 10px;
+}
+
+.links {
+    list-style: none;
+    margin-top: 95px;
+    margin-bottom: 20px;
+}
+
+.links li {
+    margin: 10px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.links li a {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: white;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    display: block;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #181b72;
+    ;
+    font-weight: bold;
+    text-align: center;
+}
+
+.links li a span {
+    color: black;
+    display: block;
+    margin-top: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    color: rgb(22, 27, 104);
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
